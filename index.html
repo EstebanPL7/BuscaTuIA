@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuscaTuIA</title>
+
+     <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="style/Style.css">
+    
+
+    </head>
+<body>
+    <header>
+        <div class="logo-contenedor">
+            <img src="Imagenes/logo.jpg" alt="logo del sitio" class="logo-img">
+            <h2 class="logo-texto">BuscaTuIA</h2>
+        </div>
+
+     <nav>
+    <a href="index.html" style="color: #00ff80; text-decoration: underline; font-weight: bold;">Inicio</a>
+    <a href="catalogo.html">Catálogo</a>
+    <a href="precios.html">Precios</a>
+    <a href="ayuda.html">Ayuda</a>
+    <a href="acerca.html">Acerca de</a>
+    <a href="login.html">Acceder/Registrarse</a>
+    <a href="perfil.html" id="userDisplayLink" style="text-decoration: none; display: none;">
+        <div id="userAvatar" style="width: 40px; height: 40px; background-color: #e91e63; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 18px; margin-left: 15px; border: 2px solid white;">
+            </div>
+                 </a>
+
+                 <a href="#" id="btnLogout" style="font-size: 14px; color: #dc3545; display: none; margin-left: 10px; text-decoration: none;">Salir</a>
+</nav>
+    </header>
+
+    <main>
+
+
+        <section class="inicio">
+            <div class="contenido">
+                <h1>Bienvenido a su buscador de confianza</h1>
+                <p>Aqui podra encontrar todo lo que necesite relacionado con su busqueda de inteligencias artificiales</p>
+                <button id="miBoton" onclick="window.location.href='catalogo.html'">Explorar Catálogo</button>
+            </div>
+
+            <div class="imagen">
+                <img src="Imagenes/hombreyrobot.jpg" alt="Descripcion pagina">
+            </div>
+        </section>
+     
+
+         <section id="beneficios">
+    <div class="titulo-seccion">
+        <h2>Beneficios de usar BuscaTuIA</h2>
+        <p>Utilizar nuestro buscador te da ventajas claras para encontrar la herramienta de IA perfecta:</p>
+    </div>
+
+    <div class="beneficios-cards-contenedor">
+        
+        <div class="beneficio-card">
+            <h3>Búsqueda Avanzada</h3>
+            <p>Encuentra exactamente lo que necesitas con filtros detallados por categoría, función o precio.</p>
+        </div>
+        
+        <div class="beneficio-card">
+            <h3>Ahorra Tiempo</h3>
+            <p>Accede a resúmenes claros y directos de cada IA, sin tener que investigar horas.</p>
+        </div>
+        
+        <div class="beneficio-card">
+            <h3>Comparación Fácil</h3>
+            <p>Compara hasta 3 herramientas de IA lado a lado para tomar la mejor decisión.</p>
+        </div>
+        
+        <div class="beneficio-card">
+            <h3>Mantente Actualizado</h3>
+            <p>Explora las últimas novedades del sector y descubre herramientas emergentes.</p>
+        </div>
+
+    </div>
+</section>
+
+   <section id="caracteristicas">
+    <div class="titulo-seccion">
+        <h2>Características y Funcionalidades</h2>
+        <p>Descubre todo lo que puedes hacer con BuscaTuIA</p>
+    </div>
+
+    <div class="tarjetas-contenedor">
+        
+        <div class="tarjeta">
+            <h3>Filtro Inteligente</h3>
+            <p>Encuentra exactamente lo que necesitas con filtros avanzados por categoría, precio o popularidad.</p>
+        </div>
+        
+        <div class="tarjeta">
+            <h3>Comparador de IAs</h3>
+            <p>Compara hasta 3 herramientas de IA lado a lado para tomar la mejor decisión.</p>
+        </div>
+        
+        <div class="tarjeta">
+            <h3>Listas de Favoritos</h3>
+            <p>Guarda las IAs que más te interesan en tu perfil personal y accede a ellas fácilmente.</p>
+        </div>
+        
+         </div>
+</section>
+
+
+
+ <section id="taller-bootstrap" style="padding: 60px; background-color: #f9f9f9;">
+    <div class="container">
+        <div class="titulo-seccion">
+            <h2>Taller Bootstrap + jQuery</h2>
+            <p>Generación de datos aleatorios y cálculo de edades</p>
+        </div>
+
+        <div class="card p-4 shadow-sm" style="border: none; border-radius: 15px; background-color: #ffffff;">
+            <div class="row align-items-center">
+                <div class="col-md-2 text-center">
+                    <img id="imagen-edad" src="" alt="Imagen" style="width: 100px; display: none;">
+                </div>
+                
+                <div class="col-md-10">
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="txtNombre" readonly>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Día</label>
+                            <input type="number" class="form-control" id="txtDia" readonly>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Mes</label>
+                            <input type="number" class="form-control" id="txtMes" readonly>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Año</label>
+                            <input type="number" class="form-control" id="txtAnio" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 d-flex gap-3 justify-content-center">
+                        <button type="button" id="btnGenerar" class="btn btn-primary" style="background-color: #342ead; border: none;">Generar Datos</button>
+                        <button type="button" id="btnInsertar" class="btn btn-success" style="background-color: #00c965; border: none;">Insertar en Tabla</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h3 style="color: #342ead; text-align: center;">Registros</h3>
+            <table class="table table-hover mt-3" style="background-color: white; border-radius: 10px; overflow: hidden;">
+                <thead style="background-color: #342ead; color: white;">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaCuerpo">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mt-4 p-3 d-flex justify-content-between align-items-center" style="background-color: #e3f2e6; border-radius: 10px;">
+            <div>
+                <strong style="color: #342ead; font-size: 18px;">Promedio de Edades: </strong>
+                <span id="txtPromedio" style="font-size: 20px; font-weight: bold;">0</span>
+            </div>
+            <button type="button" id="btnResaltar" class="btn btn-warning" style="color: #342ead; font-weight: bold;">Recorrer y Resaltar</button>
+        </div>
+
+    </div>
+</section>
+
+
+</main>
+
+
+    
+
+    <footer>
+    <div class="footer-contenido">
+
+        <div id="equipo">
+            <h3>Nuestro Equipo</h3>
+            <div class="miembro-equipo">
+                <img src="Imagenes/foto fondo blanco esteban.png" alt="Foto de Esteban">
+                <p><strong>Esteban Perez</strong> - Desarrollador</p>
+            </div>
+
+            <div class="miembro-equipo">
+                <img src="Imagenes/arquimedes imagen.jpg" alt="Foto de Arquimedes">
+                <p><strong>Arquimedes Moreno</strong> - Desarrollador</p>
+            </div>
+
+            <div class="miembro-equipo">
+                <img src="Imagenes/sergio.jpg" alt="Foto de Sergio">
+                <p><strong>Sergio Tejada</strong> - Desarrollador</p>
+            </div>
+
+            <div class="miembro-equipo">
+                <img src="Imagenes/Simon.jpeg" alt="Foto de Simon">
+                <p><strong>Simon Zuleta</strong> - Desarrollador</p>
+            </div>
+
+             </div>
+
+
+
+
+
+        <div id="formulario-contacto">
+            <h3>Contacto</h3>
+            <form action="#"> <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="asunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto" required>
+                
+                <label for="mensaje-form">Mensaje:</label>
+                <textarea id="mensaje-form" name="mensaje" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <div id="redes">
+            <h3>Síguenos</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 BuscaTuIA. Todos los derechos son reservados.</p>
+        <p id="fecha">Cargando fecha</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="Script/Script.js"></script>
+
+
+
+
+    
+<button class="btn btn-primary btn-config" data-bs-toggle="modal" data-bs-target="#modalConfig">
+        ⚙️
+    </button>
+
+    <div class="modal fade" id="modalConfig" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" style="color: black;">Configuración</h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="color: black;">
+                    
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" id="switchDarkMode">
+                        <label class="form-check-label" for="switchDarkMode">Modo Oscuro</label>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="rangeFontSize" class="form-label">Tamaño de letra</label>
+                        <input type="range" class="form-range" min="1" max="3" step="1" id="rangeFontSize" value="1">
+                        <div class="d-flex justify-content-between">
+                            <small>Normal</small>
+                            <small>Grande</small>
+                            <small>Extra</small>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+

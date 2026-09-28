@@ -1,0 +1,647 @@
+/* =========================================
+   1. ESTILOS GENERALES Y BASE
+   ========================================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #ffffff; 
+    color: #342ead;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, p {
+    text-align: center;
+}
+
+h1 {
+    color: #342ead; 
+    margin: 0;
+}
+
+p {
+    color: #342ead; 
+    font-size: 18px;
+}
+
+/* Botones Generales */
+button {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #342ead; 
+    color: white; 
+    border: none;
+    border-radius: 20px; 
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #00ff80; 
+    color: #342ead; 
+    transform: scale(1.05);
+}
+
+/* Botón Flotante de Configuración (Engranaje) */
+.btn-config {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin: 0; 
+}
+
+/* =========================================
+   2. HEADER Y NAVEGACIÓN
+   ========================================= */
+header {
+    background-color: #ffffff; 
+    color: #342ead;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(52, 46, 173, 0.1); 
+    position: sticky;  
+    top: 0;             
+    z-index: 1000;      
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 2px solid #342ead; 
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.logo-texto {
+    font-size: 22px; 
+    font-weight: bold;
+    margin: 0;
+    color: #342ead;
+}
+
+/* Navegación y Avatar */
+header nav {
+    display: flex;           
+    align-items: center;     
+    gap: 15px;               
+}
+
+nav a {
+    color: #342ead; 
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #00c965; 
+    transform: scale(1.1);
+}
+
+/* Avatar de Usuario */
+#userDisplayLink {
+    margin-left: auto;       
+    display: flex;           
+    align-items: center;
+    cursor: pointer !important;
+}
+
+#userDisplayLink:hover #userAvatar {
+    opacity: 0.8;
+    border-color: #00ff80 !important;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+
+
+/* =========================================
+   3. PÁGINA DE INICIO (HOME)
+   ========================================= */
+.inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 60px;
+    background-color: #ffffff; 
+    margin-bottom: 50px;
+}
+
+.contenido {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.contenido h1 {
+    font-size: 48px;
+    margin-bottom:  20px;
+    text-align: left; 
+}
+
+.contenido p {
+    color: #5a5a8f; 
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.contenido button, .contenido .btn {
+    margin: 30px 0;          
+    width: auto !important;  
+    display: inline-block;   
+    padding: 15px 30px;      
+}
+
+.imagen {
+    width: 40%;
+}
+
+.imagen img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(52, 46, 173, 0.15);
+}
+
+/* Secciones Beneficios y Características */
+#beneficios, #caracteristicas {
+    padding: 60px 60px;
+    background-color: #ffffff; 
+    margin-top: 0;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-seccion h2 {
+    color: #342ead;
+    font-size: 36px;
+    margin: 0;
+    font-weight: 800;
+}
+
+.beneficios-cards-contenedor, .tarjetas-contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.beneficio-card, .tarjeta {
+    background-color: #e3f2e6; 
+    border: none; 
+    border-radius: 15px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.beneficio-card:hover, .tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    background-color: #d1e8d7; 
+}
+
+.beneficio-card h3, .tarjeta h3 {
+    color: #342ead; 
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* =========================================
+   4. LOGIN Y REGISTRO
+   ========================================= */
+.main-content {
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    background-color: #f9f9f9; 
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 380px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(52, 46, 173, 0.15); 
+    margin: auto;
+}
+
+.form-signin h1 {
+    color: #342ead; 
+    font-size: 26px;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.form-floating {
+    margin-bottom: 10px;
+}
+
+.form-floating input {
+    border: 2px solid #e3f2e6; 
+    color: #342ead;
+    border-radius: 10px;
+}
+
+.form-floating input:focus {
+    border-color: #342ead;
+    box-shadow: 0 0 0 0.25rem rgba(52, 46, 173, 0.1);
+}
+
+.form-signin .btn-primary {
+    width: 100%;  
+    padding: 12px;
+    font-size: 18px;
+    background-color: #342ead !important;
+    border-color: #342ead !important;
+}
+
+.register-link, .back-link {
+    display: block;
+    margin-top: 15px;
+    color: #342ead;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* =========================================
+   5. PRECIOS Y TABLAS
+   ========================================= */
+.pricing-header {
+    max-width: 700px;
+}
+
+.card-header {
+    background-color: #e3f2e6 !important; 
+    color: #342ead !important;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+/* Tablas generales */
+.table th {
+    color: #342ead;
+}
+
+/* Tabla del Catálogo (Modo Claro) */
+.table thead {
+    background-color: #342ead;
+    color: white;
+}
+
+/* Tabla de Resumen de Precios */
+.table-resumen thead {
+    background-color: #342ead;
+    color: white;
+}
+
+.input-cantidad {
+    max-width: 80px;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid #e3f2e6;
+    color: #342ead;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* =========================================
+   6. FOOTER 
+   ========================================= */
+footer {
+    background-color: #ffffff; 
+    color: #342ead;
+    padding: 60px 60px 20px 60px;
+    margin-top: auto; 
+    border-top: 1px solid #e0e0e0; 
+}
+
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; 
+}
+
+
+#equipo, #formulario-contacto, #redes {
+    flex: 1; 
+    min-width: 250px; /* Evita que se aplasten demasiado */
+}
+
+footer h3 {
+    text-align: left; /* Títulos alineados a la izquierda */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* ---  NUESTRO EQUIPO --- */
+.miembro-equipo {
+    display: flex;           
+    align-items: center;     
+    gap: 15px;               
+    margin-bottom: 15px;     
+}
+
+.miembro-equipo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00ff80; 
+    flex-shrink: 0;          
+}
+
+.miembro-equipo p {
+    margin: 0;               
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+/* --- B. FORMULARIO CONTACTO --- */
+#formulario-contacto label {
+    display: block;          
+    text-align: left;
+    margin-top: 10px;
+}
+
+#formulario-contacto input,
+#formulario-contacto textarea {
+    width: 100%;             
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f2f4f8; 
+    color: #342ead;
+    box-sizing: border-box;  
+}
+
+#formulario-contacto button {
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* --- C. REDES SOCIALES  --- */
+#redes a {
+    display: block;          
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #342ead;
+    font-weight: 500;
+    text-align: left;
+}
+
+#redes a:hover {
+    color: #00ff80;
+    text-decoration: underline;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #888;
+}
+
+/* =========================================
+   7. MODO OSCURO 
+   ========================================= */
+
+/* A. Fondos Generales */
+body.dark-mode, 
+body.dark-mode main,
+body.dark-mode .container,
+body.dark-mode .main-content,
+body.dark-mode section,
+body.dark-mode section[style], 
+body.dark-mode #taller-bootstrap {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+/* B. Textos Generales  */
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4,
+body.dark-mode p, body.dark-mode label, body.dark-mode strong,
+body.dark-mode .form-label, body.dark-mode .modal-title {
+    color: #e0e0e0 !important;
+}
+
+/* C. Header y Footer */
+body.dark-mode header {
+    background-color: #1f1f1f !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5) !important;
+}
+body.dark-mode footer {
+    background-color: #000 !important;
+    color: #aaa !important;
+}
+
+/* D. Tarjetas (Cards, Beneficios, Precios) */
+body.dark-mode .card,
+body.dark-mode .beneficio-card,
+body.dark-mode .tarjeta,
+body.dark-mode .bg-light {
+    background-color: #1e1e1e !important;
+    color: #fff !important;
+    border: 1px solid #444 !important;
+    box-shadow: none !important;
+}
+
+body.dark-mode .card-header {
+    background-color: #342ead !important; 
+    color: #fff !important;
+    border-bottom: 1px solid #222;
+}
+
+/* E. Tablas */
+body.dark-mode .table {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+    --bs-table-bg: #1e1e1e !important;
+}
+body.dark-mode .table thead, 
+body.dark-mode .table thead th {
+    background-color: #2c2c2c !important;
+    color: #fff !important;
+}
+body.dark-mode .table th, body.dark-mode .table td {
+    border-color: #444;
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+}
+
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+    color: #fff !important;
+}
+
+
+body.dark-mode .form-floating .form-control::placeholder {
+    opacity: 0; 
+}
+body.dark-mode .form-floating .form-control:focus::placeholder {
+    opacity: 1; 
+}
+
+/*  Caja de Comentarios  */
+
+body.dark-mode textarea#txtModalComentario {
+    background-color: #3b3b3b !important;
+    color: #ffffff !important;
+    border: 1px solid #666 !important;
+}
+body.dark-mode textarea#txtModalComentario::placeholder {
+    color: #cccccc !important;
+    opacity: 1 !important;
+}
+
+/* H. Botones  */
+body.dark-mode .btn-outline-dark {
+    color: #fff !important;
+    border-color: #fff !important;
+}
+body.dark-mode .text-muted {
+    color: #b0b0b0 !important;
+}
+body.dark-mode .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%); 
+}
+body.dark-mode .d-flex[style*="background-color: #e3f2e6"] {
+    background-color: #2d2d2d !important; 
+    border: 1px solid #444;
+}
+
+
+body.dark-mode input:-webkit-autofill,
+body.dark-mode input:-webkit-autofill:hover, 
+body.dark-mode input:-webkit-autofill:focus, 
+body.dark-mode input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #2d2d2d inset !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* =========================================
+   8. UTILIDADES (TAMAÑO DE FUENTE DINÁMICO)
+   ========================================= */
+
+header .logo-texto { font-size: 1.5rem !important; }
+header nav a { font-size: 1rem !important; }
+.beneficio-card h3, .tarjeta h3 { font-size: 1.5rem !important; }
+.beneficio-card p, .tarjeta p { font-size: 1rem !important; }
+.contenido h1 { font-size: 3rem !important; }
+.contenido p { font-size: 1.2rem !important; }
+
+/* =========================================
+   EXCEPCIÓN: VENTANA MODAL SIEMPRE BLANCA
+   (Para el menú de configuración y calificar)
+   ========================================= */
+
+/* 1. Fondo y Texto de la ventana */
+body.dark-mode .modal-content {
+    background-color: #1e1e1e !important; 
+    color: #ffffff !important;            
+    border: 1px solid #ccc;
+}
+
+/* 2. Título de la ventana */
+body.dark-mode .modal-title {
+    color: #ffffff !important; 
+}
+
+/* 3. Etiquetas y textos pequeños dentro */
+body.dark-mode .modal-body label,
+body.dark-mode .modal-body small,
+body.dark-mode .modal-body p {
+    color: #ffffff !important;
+}
+
+/* 4. El botón de cerrar (X) */
+
+body.dark-mode .btn-close {
+    filter: none !important; 
+}
+
+body.dark-mode .alert-info {
+    background-color: #2d2d2d !important; 
+    color: #00ff80 !important;            
+    border: 1px solid #444 !important;    
+}
+
+
+body.dark-mode .alert-info h2 {
+    color: #ffffff !important;            
+}
+
+/* =========================================
+   ESTILOS ACORDEÓN (PÁGINA AYUDA)
+   ========================================= */
+
+/* Modo Oscuro para el Acordeón */
+body.dark-mode .accordion-item {
+    background-color: #1e1e1e !important;
+    color: #fff !important;
+    border-color: #444;
+}
+
+body.dark-mode .accordion-button {
+    background-color: #2d2d2d !important;
+    color: #fff !important;
+}
+
+body.dark-mode .accordion-button:not(.collapsed) {
+    background-color: #342ead !important; 
+    color: #fff !important;
+}
+
+/* Caja de contacto extra en modo oscuro */
+body.dark-mode div[style*="background-color: #e3f2e6"] {
+    background-color: #1e1e1e !important;
+    border-color: #342ead !important;
+}
+body.dark-mode div[style*="background-color: #e3f2e6"] h4,
+body.dark-mode div[style*="background-color: #e3f2e6"] p {
+    color: #e0e0e0 !important;
+}
